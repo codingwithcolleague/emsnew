@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3> Login Page </h3>
+    <table>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <tr>
+                <td> <label  for="username"> Username </label> </td>
+                <td> <input type="text"  name="username" /></td>
+            </tr>
+            <tr>
+                <td> <label  for="password"> password </label> </td>
+                <td> <input type="text"  name="password" /></td>
+
+            </tr>
+            <tr>
+                <td> 
+                    <input type="submit" name="submit" />
+                </td>
+
+            </tr>
+        </form>
+    </table> 
+
+    <p> {{ error }} </p>
+
+{% endblock %}

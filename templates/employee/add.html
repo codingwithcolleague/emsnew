@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3> Add Employee Page </h3>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <!-- {{ form.as_table }} -->
+
+    <button name="submit">submit</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>  Poll Lists </h1>
+    {% if questions %}
+        <ul>
+            {% for question in questions %}
+                <li>
+                    <a  href="/poll/{{ question.id }}/" > {{ question.title }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+{% endblock %}

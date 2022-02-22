@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>
+    <h3>{{question.title}}</h3>
+</p>
+<div class="list-group col-md-6">
+{% for choice  in question.choices %} 
+
+   <a class="list-group-item" href="{% url 'poll:details' question.id %}">
+        <span class="badge badge-pill badge-primary float-right">{{choice.votes}}</span>  
+        {{ choice.text }} 
+
+  </a>
+
+{% empty %}
+    <p> There is no choice available for this question  </p>
+
+{% endfor %}
+
+<div class="list-group-item">There is no chice available for this question.</div>
+
+</div>
+{% endblock content %}

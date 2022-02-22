@@ -1,0 +1,7 @@
+
+In [30]: q
+Out[30]: <Question: Question object (1)>
+
+In [31]: q.choice_set.all()
+
+c1.question__id = q1.id
